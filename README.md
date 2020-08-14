@@ -4,13 +4,12 @@ fastapi test project
 To run the project 
 
 setup db, using the shapefile from [Timezone boundary builder project](https://github.com/evansiroky/timezone-boundary-builder/releases/) and the postgis tool `shp2pgsl`
-
 ```sql
 CREATE DATABASE tzdb;
 \c tzdb
 CREATE EXTENSION postgis;
 ```
-
+export shapefile to db
 ```bash
 shp2pgsql -D combined-shapefile.shp timezones | psql -U <db user> -d tzdb
 ```
