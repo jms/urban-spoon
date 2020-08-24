@@ -1,5 +1,5 @@
 # urban-spoon
-fastapi test project
+fastapi project
 
 To run the project 
 
