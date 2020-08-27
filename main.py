@@ -1,10 +1,9 @@
 from fastapi import FastAPI, Depends, Query
 from sqlalchemy.orm import Session
 
-from timezone_utils import schemas, models, utils
-from timezone_utils.database import engine, SessionLocal
+from timezone_utils import schemas, utils
+from timezone_utils.database import SessionLocal
 
-models.Base.metadata.create_all(bind=engine)
 
 tags_metadata = [
     {
